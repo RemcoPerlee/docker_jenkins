@@ -1,3 +1,8 @@
 #!/bin/sh
-./master/rebuild.sh
-./slave/rebuild.sh
+cd master
+./rebuild.sh
+cd ..
+
+cd slave
+./rebuild.sh
+cd ..
