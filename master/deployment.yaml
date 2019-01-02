@@ -20,6 +20,7 @@ spec:
               containerPort: 8080
             - name: jnlp-port
               containerPort: 50000
+          volumeMounts:
             - name: jenkins-config
               mountPath: "/var/jenkins_home"
       volumes:
