@@ -1,0 +1,29 @@
+apiVersion: extensions/v1beta1 # for versions before 1.7.0 use apps/v1beta1
+kind: Deployment
+metadata:
+  name: jenkins-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jenkins
+  template:
+    metadata:
+      labels:
+        app: jenkins
+    spec:
+      containers:
+      - name: jenkins
+        image: jenkinsci/blueocean:latest
+        #image: jenkins/jenkins
+        ports:
+        - containerPort: 8080
+        volumeMounts:
+          # name must match the volume name below
+          - name: jenkins-config
+            mountPath: "/var/jenkins_home"
+      volumes:
+      - name: jenkins-config
+        hostPath:
+          path: /mnt/kubernetes/jenkins/config
+          type: Directory

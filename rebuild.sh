@@ -1,1 +1,3 @@
-kubectl delete pod -l app=jenkins --namespace=jenkins
+#!/bin/sh
+./master/rebuild.sh
+./slave/rebuild.sh
