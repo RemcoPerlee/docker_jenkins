@@ -1,3 +1,4 @@
+kubectl delete deployment -l app=jenkins-master --namespace=jenkins
 kubectl delete pod -l app=jenkins-master --namespace=jenkins
 
 kubectl apply -f namespace.yaml

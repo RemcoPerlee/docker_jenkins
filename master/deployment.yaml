@@ -3,7 +3,7 @@ kind: Pod
 metadata:
   name: jenkins-master
   labels:
-    app: jenkins
+    app: jenkins-master
 spec:
   hostname: jenkins-master
   containers:
