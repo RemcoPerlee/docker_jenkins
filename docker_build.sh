@@ -4,5 +4,5 @@ cd master
 cd ..
 
 cd slave
-# ./docker_build.sh
+./docker_build.sh
 cd ..
