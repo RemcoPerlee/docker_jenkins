@@ -6,9 +6,11 @@ spec:
   type: NodePort
   ports:
     - port: 8080
+      name: http
       targetPort: 8080
       nodePort: 30880
     - port: 50000
+      name: jnlp
       targetPort: 50000
   selector:
     app: jenkins-master
