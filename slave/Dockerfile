@@ -23,5 +23,5 @@ RUN apt-get install -y kubectl
 COPY config /home/jenkins/.kube/
 
 # set the password for the jenkins user
-RUN echo "jenkins" | passwd --stdin jenkins
+RUN echo -e "jenkins\\jenkins" | passwd linuxuser
 # USER jenkins
