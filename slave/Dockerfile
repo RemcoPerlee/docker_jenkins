@@ -14,6 +14,9 @@ RUN add-apt-repository \
 RUN apt-get update
 RUN apt-get install -y docker-ce
 
+RUN groupadd docker
+RUN usermod -aG docker jenkins
+
 # INSTALL KUBECTL to deploy them on the cluster
 RUN curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
 RUN echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | tee -a /etc/apt/sources.list.d/kubernetes.list
@@ -22,6 +25,4 @@ RUN apt-get install -y kubectl
 
 COPY config /home/jenkins/.kube/
 
-# set the password for the jenkins user
-RUN echo -e "jenkins\jenkins" | passwd jenkins
-# USER jenkins
+USER jenkins
