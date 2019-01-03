@@ -2,7 +2,7 @@ FROM jenkins/jnlp-slave
 
 USER root
 
-RUN apt-get update && apt-get install -y apt-utils apt-transport-https software-properties-common lsb_release
+RUN apt-get update && apt-get install -y apt-utils apt-transport-https software-properties-common lsb-release
 
 # INSTALL DOCKER to build images
 RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
