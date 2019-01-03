@@ -2,7 +2,7 @@ FROM jenkins/jnlp-slave
 
 USER root
 
-RUN apt-get update && apt-get install -y apt-utils apt-transport-https
+RUN apt-get update && apt-get install -y apt-utils apt-transport-https add-apt-repository
 
 # INSTALL DOCKER to build images
 RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
