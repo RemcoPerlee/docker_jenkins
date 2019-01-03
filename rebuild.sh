@@ -1,6 +1,6 @@
 #!/bin/sh
 cd master
-./rebuild.sh
+# ./rebuild.sh
 cd ..
 
 cd slave
