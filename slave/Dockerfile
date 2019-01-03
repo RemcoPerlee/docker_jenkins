@@ -14,7 +14,6 @@ RUN add-apt-repository \
 RUN apt-get update
 RUN apt-get install -y docker-ce
 
-RUN groupadd docker
 RUN usermod -aG docker jenkins
 
 # INSTALL KUBECTL to deploy them on the cluster
