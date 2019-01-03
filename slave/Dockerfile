@@ -1,6 +1,6 @@
 FROM jenkins/jnlp-slave
 
-RUN apk add docker
-RUN apk add kubectl
+RUN apt install docker
+RUN apt install kubectl
 
 COPY config /home/jenkins/.kube/
