@@ -22,4 +22,4 @@ RUN apt-get install -y kubectl
 
 COPY config /home/jenkins/.kube/
 
-USER jenkins
+# USER jenkins

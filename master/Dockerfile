@@ -18,6 +18,12 @@ RUN /usr/local/bin/install-plugins.sh simple-theme-plugin
 # Scaling
 RUN /usr/local/bin/install-plugins.sh kubernetes
 
+# install github
+RUN /usr/local/bin/install-plugins.sh github
+
+
+RUN /usr/local/bin/install-plugins.sh locale
+
 # install Maven
 # USER root
 # RUN apt-get update && apt-get install -y maven
