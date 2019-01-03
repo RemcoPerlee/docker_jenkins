@@ -20,6 +20,8 @@ spec:
     volumeMounts:
       - name: jenkins-config
         mountPath: "/var/jenkins_home"
+    securityContext:
+      privileged: true
   volumes:
     - name: jenkins-config
       hostPath:
